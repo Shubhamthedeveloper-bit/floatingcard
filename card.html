@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Card Hover & Image Zoom</title>
+
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 250px;
+    color: white;
+    border-radius: 10px;
+    background: #e33b3b;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-img {
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.card:hover .card-img img {
+    transform: scale(2);
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="card-img">
+        <img src="react js.avif" alt="Image">
+    </div>
+    <div class="card-content">
+        <h3>Hover Card</h3>
+        <p>Image zoom & card lift effect</p>
+    </div>
+</div>
+
+</body>
+</html>
